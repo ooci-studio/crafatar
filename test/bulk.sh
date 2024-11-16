@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-hostname="crafatar.com"
+hostname=""
 async="true"
 random="false"
 interval="0.1"
