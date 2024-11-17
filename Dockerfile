@@ -1,6 +1,6 @@
 FROM node:12-alpine AS builder
 
-RUN apk --no-cache add git python3 build-base redis cairo-dev pango-dev jpeg-dev giflib-dev
+RUN apk --no-cache add git python3 build-base cairo-dev pango-dev jpeg-dev giflib-dev
 
 RUN adduser -D app
 USER app
@@ -14,7 +14,6 @@ RUN mkdir -p images/faces images/helms images/skins images/renders images/capes
 
 ARG VERBOSE_TEST
 ARG DEBUG
-RUN nohup redis-server & npm test
 
 
 FROM node:12-alpine
